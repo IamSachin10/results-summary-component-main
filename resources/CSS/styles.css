@@ -116,6 +116,8 @@ a:active {
 
 
 /* results */
+
+
 .results {
   background: linear-gradient(
     var(--gradients-lightSlateBlue),
@@ -256,15 +258,25 @@ a:active {
 /* Media queries for big screen */
 
 @media screen and (min-width: 37.5em) {
-  .result-summary {
+
+  main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    
+  }
+  .results-summary {
     width: 600px;
-    height: 100vh;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
+    box-shadow: 5px 5px 30px #c8c7ff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
+  
+  
   .results {
     border-radius: 1.1em;
     .results__rank{
@@ -280,7 +292,6 @@ a:active {
  
 
   .summary {
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3px;
 
     /* btn section */
     .btn-container{
